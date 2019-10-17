@@ -1,0 +1,19 @@
+Here I have used spacy and stanfordnlp for the coreference
+
+How to Get started
+On Linux
+1) python3 -m venv env
+2) source env/bin/activate
+3) pip install -r requirements.txt
+
+For Spacy
+4) python3 coref_spacy.py
+
+For Stanford NLP
+5) Download the corenlp from https://stanfordnlp.github.io/CoreNLP/index.html#download
+6) Once the download has completed, unzip the file
+7) Make sure you have jave 8 installed(use java -version)
+6) go to the path of the unzipped Stanford CoreNLP and execute the below command:
+java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -annotators
+"tokenize,ssplit,pos,lemma,parse,sentiment" -port 9030 -timeout 30000
+7)python3 coref_stanfordnlp.py
